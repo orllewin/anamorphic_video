@@ -1,0 +1,97 @@
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AnamorphActivity"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:minHeight="?android:attr/actionBarSize">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/toolbar_title_size"
+                android:text="@string/activity_title"
+                android:layout_gravity="center"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:visibility="gone"/>
+
+        <ScrollView
+            android:id="@+id/log_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/video_view"
+            android:layout_above="@+id/button_bar"
+            android:weightSum="1"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                tools:ignore="SmallSp"
+                android:id="@+id/log"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textSize="@dimen/log_text_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                 />
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/button_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_alignParentBottom="true">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/choose_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose"
+                android:background="?android:attr/selectableItemBackground"
+                android:textAllCaps="false"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Process"
+                android:background="?android:attr/selectableItemBackground"
+                android:textAllCaps="false"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/progress_tint"
+            android:visibility="gone"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</layout>

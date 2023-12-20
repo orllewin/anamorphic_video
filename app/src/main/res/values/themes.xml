@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Anamorph" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/light</item>
+        <item name="colorPrimaryVariant">@color/light</item>
+        <item name="colorOnPrimary">@color/dark</item>
+
+        <item name="colorSecondary">@color/dark</item>
+        <item name="colorSecondaryVariant">@color/dark</item>
+        <item name="colorOnSecondary">@color/light</item>
+
+        <item name="android:statusBarColor" tools:targetApi="l">@color/light</item>
+
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+
+
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.Button</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.App.Button</item>
+
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Button" parent="">
+        <item name="colorPrimary">@color/dark</item>
+    </style>
+</resources>

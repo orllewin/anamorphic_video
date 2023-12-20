@@ -1,0 +1,16 @@
+# Anamorphic Video 1.0.1
+
+Download:
+=> oppen_anamorphicvideo_release_1_0_1.apk oppen_anamorphicvideo_release_1_0_1.apk (119M)
+
+Signing Cert SHA256:
+```
+B1:EB:49:C6:0C:C4:BC:BC:77:F6:47:EE:49:C5:5A:C1
+2A:71:27:B8:87:85:52:94:9D:BB:45:71:BC:3C:67:EF
+```
+
+.apk file MD5 checksum:
+```
+CB30ADA6882EF6FC2492B71F0534EE4A
+```
+
